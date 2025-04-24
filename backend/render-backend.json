@@ -1,0 +1,58 @@
+{
+  "name": "sistema-controle-pausas-backend",
+  "type": "web",
+  "env": "node",
+  "buildCommand": "cd backend && npm install && npm run build",
+  "startCommand": "cd backend && npm start",
+  "envVars": [
+    {
+      "key": "NODE_ENV",
+      "value": "production"
+    },
+    {
+      "key": "PORT",
+      "value": "10000"
+    },
+    {
+      "key": "JWT_SECRET",
+      "value": "sistema-controle-pausas-production-secret"
+    },
+    {
+      "key": "JWT_EXPIRES_IN",
+      "value": "24h"
+    },
+    {
+      "key": "DB_USERNAME",
+      "fromDatabase": {
+        "name": "sistema-controle-pausas-db",
+        "property": "user"
+      }
+    },
+    {
+      "key": "DB_PASSWORD",
+      "fromDatabase": {
+        "name": "sistema-controle-pausas-db",
+        "property": "password"
+      }
+    },
+    {
+      "key": "DB_NAME",
+      "fromDatabase": {
+        "name": "sistema-controle-pausas-db",
+        "property": "database"
+      }
+    },
+    {
+      "key": "DB_HOST",
+      "fromDatabase": {
+        "name": "sistema-controle-pausas-db",
+        "property": "host"
+      }
+    }
+  ],
+  "disk": {
+    "name": "data",
+    "mountPath": "/data",
+    "sizeGB": 1
+  }
+}

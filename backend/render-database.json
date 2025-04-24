@@ -1,0 +1,14 @@
+{
+  "name": "sistema-controle-pausas-db",
+  "type": "postgresql",
+  "plan": "starter",
+  "region": "ohio",
+  "databaseName": "pausas_db",
+  "user": "pausas_admin",
+  "ipAllowList": [
+    {
+      "type": "web",
+      "value": "sistema-controle-pausas-backend"
+    }
+  ]
+}
