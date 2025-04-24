@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "pausas_admin",
+    "password": "cjasUVlJCNu4ApcmLjngYJD8EDhLgDAm",
+    "database": "pausas_db",
+    "host": "dpg-d04kj02dbo4c73emstp0-a.ohio-postgres.render.com",
+    "port": 5432,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
